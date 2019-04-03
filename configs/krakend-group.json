@@ -1,0 +1,41 @@
+{
+  "version": 2,
+  "extra_config": {},
+  "timeout": "3000ms",
+  "cache_ttl": "300s",
+  "output_encoding": "json",
+  "name": "My Service",
+  "endpoints": [
+    {
+      "endpoint": "/users/{id}",
+      "method": "GET",
+      "extra_config": {},
+      "output_encoding": "json",
+      "concurrent_calls": 1,
+      "backend": [
+        {
+          "url_pattern": "/api/v2/users/{id}",
+          "encoding": "json",
+          "extra_config": {},
+          "sd": "static",
+          "host": [
+            "https://qiita.com"
+          ],
+          "disable_host_sanitize": false,
+          "group": "qiita"
+        },
+        {
+          "url_pattern": "/users/{id}",
+          "encoding": "json",
+          "extra_config": {},
+          "sd": "static",
+          "host": [
+            "https://api.github.com"
+          ],
+          "disable_host_sanitize": false,
+          "group": "github"
+        }
+      ]
+    }
+  ]
+}

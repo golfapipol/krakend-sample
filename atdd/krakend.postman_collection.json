@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "ac50ff66-ad5f-48ef-ba96-7c0baac66f47",
+		"name": "krakend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Search",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d996a816-5370-4129-9b4a-079f6c3d2d83",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "3a5ffe95-ad7c-407d-b81c-c7b3e2e8b38e",
+						"exec": [
+							"console.log(pm.response.json())",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/upura",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"upura"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
